@@ -8,6 +8,8 @@ arch=('x86_64' 'aarch64')
 url='https://github.com/agent-habilis/agent-gossip'
 license=('MIT')
 depends=('glibc' 'libgcc')
+# The AUR package installs the same files.
+conflicts=('agent-gossip-bin')
 # Upstream ships a stripped release build and no debug symbols to split out.
 options=('!strip' '!debug')
 # The release tarball holds the binary and the man pages, not the licence.
